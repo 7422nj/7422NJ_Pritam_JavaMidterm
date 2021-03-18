@@ -15,7 +15,7 @@ import java.util.Properties;
 
 import parser.Student;
 
-public class ConnectToSqlDB extends User{
+public class ConnectToSqlDB {
 
     public static Connection connect = null;
     public static Statement statement = null;
@@ -24,7 +24,7 @@ public class ConnectToSqlDB extends User{
 
     public static Properties loadProperties() throws IOException {
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream("properties\\secret.properties");
+        InputStream ism = new FileInputStream("src/secret.properties");
         prop.load(ism);
         ism.close();
         return prop;

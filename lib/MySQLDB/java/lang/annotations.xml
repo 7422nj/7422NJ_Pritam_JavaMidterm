@@ -1,0 +1,7 @@
+<root>
+    <item name='java.lang.System java.util.Properties getProperties()'>
+        <annotation name='org.jetbrains.annotations.Contract'>
+            <val name="pure" val="true"/>
+        </annotation>
+    </item>
+</root>

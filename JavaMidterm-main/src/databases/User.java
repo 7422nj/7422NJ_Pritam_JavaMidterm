@@ -2,9 +2,9 @@ package databases;
 
 public class User {
 
-    String stName = "Pritam";
-    String stID = "12345";
-    String stDOB = "08101994";
+    String stName;
+    String stID;
+    String stDOB;
 
     public User() {
     }
