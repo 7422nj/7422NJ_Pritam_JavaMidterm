@@ -1,2 +1,2 @@
 # 7422NJ_Pritam_JavaMidterm
-# The best way to predict the future is to create it.
+# The Best Way to Predict The Future is to Create it.
