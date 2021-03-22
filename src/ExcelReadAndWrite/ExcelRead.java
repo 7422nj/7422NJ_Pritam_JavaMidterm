@@ -13,15 +13,20 @@ public class ExcelRead {
 
     public static void main(String[] args) throws IOException {
 
+        //Handles files in Java
         FileInputStream fis = new FileInputStream("DataTest/StudentsRUs.xlsx");
 
-        XSSFWorkbook workbook = new XSSFWorkbook(fis);
-        XSSFSheet sheet = workbook.getSheetAt(0);
+        //ExcelWorkbook
+        XSSFWorkbook workbook = new XSSFWorkbook(fis); //-> will read data received from FileInputStream
+
+        //ExcelSheet
+        XSSFSheet sheet = workbook.getSheetAt(0);//-> sheet index 0
 
         Iterator ite = sheet.rowIterator();
 
         while (ite.hasNext()) { //boolean condition
             Row row = (Row) ite.next();
+
             //Return all cells including the empty cells
             Iterator<Cell> cite = row.cellIterator(); //<- iterate over each column <- loop until all rows are fetched
 

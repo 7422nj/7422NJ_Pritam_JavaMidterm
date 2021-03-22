@@ -1,80 +1,213 @@
 ***ANSWER ALL QUESTIONS BELOW***
 
-Why do we need data structure?
-Answer:
+why do we need data structure?
+A. The needs of data structures include the following: efficiency, reusability, and invisibility.
+Data structure provides a means of organizing, managing, and storing data efficiently.
+It also includes the collection of data as well as the operations that can be applied to that data.
 
-What are the various operations that can be performed on different data structures?
-Answer:
 
-When would we use data structures in the real world?
-Answer:
+What are the various operations that can be performed on different Data Structures?
+A.
+- Traversing: Traversing a Data Structure means to visit the element stored in it. This can be done with any type of DS.
+- Searching: To find a particular element in the given data-structure. It is considered as successful when the required element is found.
+Searching is the operation which we can performed on data-structures like array, linked-list, tree, graph, etc.
+- It is the operation which we apply on all the data-structures.
+Insertion means to add an element in the given data structure.
+The operation of insertion is successful when the required element is added to the required data-structure.
+- Deletion: It is the operation which we apply on all the data-structures.
+Deletion means to delete an element in the given data structure.
+The operation of deletion is successful when the required element is deleted from the data structure.
+
+List out the areas in which data structures are applied extensively?
+A. The name of areas are:
+
+· Compiler Design
+
+· Operating System
+
+· Database Management System
+
+· Statistical analysis package
+
+· Numerical Analysis
+
+· Graphics
+
+· Artificial Intelligence
+
+· Simulation
 
 What is an Array?
-Answer:
+A. An array is a data structure that contains a group of elements.
+Typically these elements are all of the same data type, such as an integer or string.
+Arrays are commonly used in computer programs to organize data so that a related set of values can be
+easily sorted or searched.
 
-What is the difference between Array and ArrayList?
-Answer:
+What is the difference between the Array and ArrayList?
+A.An array is basic functionality provided by Java. ArrayList is part of collection framework in Java.
+Therefore array members are accessed using [], while ArrayList has a set of methods to access elements
+and modify them.
+Array is a fixed size data structure while ArrayList is not.
 
-What is a LinkedList?
-Answer:
+What is LinkedList?
+A. A linked list is a linear collection of data elements whose order is not given by their physical placement in memory.
+Instead, each element points to the next.
+It is a data structure consisting of a collection of nodes which together represent a sequence.
 
-How is an Array different from LinkedList?
-Answer:
+How is an Array different from Linked List?
+A. Arrays store elements in contiguous memory locations, resulting in easily calculable addresses for the elements
+stored and this allows a faster access to an element at a specific index.
+Linked lists are less rigid in their storage structure and elements are usually not stored in contiguous locations
+hence they need to be stored with additional tags giving a reference to the next element.
+This difference in the data storage scheme decides which data structure would be more suitable for a given situation.
 
-What is a Queue?
-Answer:
+What is queue?
+A.Java Queue interface orders the element in FIFO(First In First Out) manner.
+In FIFO, first element is removed first and last element is removed at last.
+This is similar to how a queue in a supermarket works. The Java Queue interface
+is a subtype of the Java Collection interface.
 
-What is a Stack (not Java memory - refers to data structure)?
-Answer:
+What is stack?
+A.The stack is a linear data structure that is used to store the collection of objects.
+It is based on Last-In-First-Out (LIFO).
+The push operation inserts an element into the stack and pop operation removes an element from the top of the stack
 
-What is FIFO and LIFO?
-Answer:
+what is FIFO and LIFO?
+A.FIFO is an abbreviation for first in, first out. It is a method for handling data structures where the first element
+is processed first and the newest element is processed last.
+LIFO is an abbreviation for Last in, first out is same as fist in, last out (FILO).
 
-Explain Big O Notation?
-Answer:
 
-What is the best case to search an element from an array?
-Answer:
+what is the order of complexity?
+A.The fastest-possible running time for any runtime analysis is O(1), commonly referred to as constant running time.An algorithm with constant running time always takes the same amount of time to execute, regardless of the input size.This is the ideal run time for an algorithm, but it’s rarely achievable. The performance of most algorithms depends on n, the size of the input.The algorithms can be classified as follows from best-to-worse performance:
 
-What is the worst case to search an element from an array?
-Answer:
+  O(log n) — An algorithm is said to be logarithmic if its running time increases logarithmically in proportion to the input size.
 
-Describe what a tree data structure is?
-Answer:
+  O(n) — A linear algorithm’s running time increases in direct proportion to the input size.
 
-Describe what a graph data structure is?
-Answer:
+  O(n log n) — A superlinear algorithm is midway between a linear algorithm and a polynomial algorithm.
 
-What is the difference between the HashTable and HashMap?
-Answer:
+  O(n^c) — A polynomial algorithm grows quickly based on the size of the input.
 
-What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model
-Answer:
+  O(c^n) — An exponential algorithm grows even faster than a polynomial algorithm.
 
-How do HashMaps work in Java? How do they store values, and when are they useful?
-Answer:
+  O(n!) — A factorial algorithm grows the fastest and becomes quickly unusable for even small values of n.
 
-What is ArrayIndexOutOfBoundsException in java? When does it occur?
-Answer:
+
+what is the best case to search an element from an array?
+A.Sequential search is the best that we can do when trying to find a value in an unsorted array.
+But if the array is sorted in increasing order by value, then we can do much better.
+We use a process called binary search.
+
+
+what is the worst case to search an element from an array?
+A.The worst-case time complexity is linear. Similarly,
+searching for an element for an element can be expensive, since you may need to scan the entire array.
+
+what is tree in data structure?
+A.A tree is a nonlinear data structure, compared to arrays, linked lists, stacks and queues which are linear
+data structures. A tree can be empty with no nodes or a tree is a structure consisting of one node called
+the root and zero or one or more subtrees.
+
+
+what is graph in data structure?
+A.A Graph is a non-linear data structure consisting of nodes and edges. The nodes are sometimes also referred to as
+vertices and the edges are lines or arcs that connect any two nodes in the graph.
+
+what is the difference between the HashTable and HashMap?
+A. HashMap is non synchronized. It is not-thread safe and can't be shared between many threads without proper
+synchronization code whereas Hashtable is synchronized HashMap allows one null key and multiple null values
+whereas Hashtable doesn't allow any null key or value.
+
+
+What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+A. RDBMS = Array (i.e. Array of structures)
+
+  Network data model = Graph
+
+  Hierarchical data model = Trees
+
+How HashMap works in java?
+A.HashMap in Java works on hashing principles. It is a data structure which allows us to store object and retrieve it in
+ constant time O(1) provided we know the key. In hashing, hash functions are used to link key and value in HashMap.
+HashMap internally stores mapping in the form of Map.
+
+
+What is ArrayIndexOutOfBoundsException in java? When it occurs?
+A.Thrown to indicate that an array has been accessed with an illegal index.
+ The index is either negative or greater than or equal to the size of the array.
 
 What are the different ways of copying an array into another array?
-Answer:
+A.There are mainly four different ways to copy all elements of one array into another array in Java.
+  Manually.
+  Arrays.copyOf()
+  System.arraycopy()
+  Object.clone()
+
+
+What is difference between an array and a linked list?
+A.An array is a collection of elements of a similar data type. Linked List is an ordered collection of elements of the
+same type in which each element is connected to the next using pointers. Array elements can be accessed randomly using
+the array index. Random accessing is not possible in linked lists.
+
 
 What is DFS and BFS?
-Answer:
+A.BFS stands for Breadth First Search. DFS stands for Depth First Search. 2. BFS(Breadth First Search) uses Queue data
+ structure for finding the shortest path. DFS(Depth First Search) uses Stack data structure.
+
 
 What is Recursion?
-Answer:
-
-What are linear and non-linear data Structures?
-Answer:
+A.Recursion is the technique of making a function call itself.
+This technique provides a way to break complicated problems down into simple problems which are easier to solve.
 
 
-Outline different sorting algorithms and their time complexities:
+What are linear and non linear data Structures?
+A.In linear data structure, data elements are sequentially connected and each element is traversable through a single run.
+ In non-linear data structure, data elements are hierarchically connected and are present at various levels.
+ Linear data structures can be traversed completely in a single run.
+
+
+What is Big-(O)-notation?
+A.Big O Notation is a relative representation of an algorithm's complexity. It describes how an algorithm performs and scales
+by denoting an upper bound of its growth rate. It describes the upper bound of the growth rate of a function and could be thought
+ of the worst case scenario.
+
+
+Outlined different kind of sorting algorithm with time complexity?
+A.
+      Algorithm	Time Complexity
+                    Best	 Worst
+  Selection Sort    Ω(n^2)	 O(n^2)
+  Bubble Sort	    Ω(n)	 O(n^2)
+  Insertion Sort	Ω(n)	 O(n^2)
+
+
+
+
 
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
-  a) In terms of Accessing elements:
-  b) In terms of Inserting elements:
-  c) In terms of Searching elements:
-  d) In terms of Removing elements:
+  a)In terms of Accessing element.
+  b)In terms of Inserting element.
+  c)In terms of Searching element.
+  d)In terms of Removing element.
+
+ Common Data Structure Operations
+        Data Structure     Time Complexity
+                            Average                                            Worst
+                         Access     Search     Insertion  Deletion   Access     Search     Insertion  Deletion
+        Array              Θ(1)       Θ(n)       Θ(n)       Θ(n)       O(1)       O(n)       O(n)       O(n)
+        Stack              Θ(n)       Θ(n)       Θ(1)       Θ(1)       O(n)       O(n)       O(1)       O(1)
+        Queue              Θ(n)       Θ(n)       Θ(1)       Θ(1)       O(n)       O(n)       O(1)       O(1)
+        Singly-Linked List Θ(n)       Θ(n)       Θ(1)       Θ(1)       O(n)       O(n)       O(1)       O(1)
+        Doubly-Linked List Θ(n)       Θ(n)       Θ(1)       Θ(1)       O(n)       O(n)       O(1)       O(1)
+        Skip List          Θ(log(n))  Θ(log(n))  Θ(log(n))  Θ(log(n))  O(n)       O(n)       O(n)       O(n)
+        Hash Table         N/A        Θ(1)       Θ(1)       Θ(1)       N/A        O(n)       O(n)       O(n)
+        Binary Search Tree Θ(log(n))  Θ(log(n))  Θ(log(n))  Θ(log(n))  O(n)       O(n)       O(n)       O(n)
+        Cartesian Tree     N/A        Θ(log(n))  Θ(log(n))  Θ(log(n))  N/A        O(n)       O(n)       O(n)
+        B-Tree             Θ(log(n))  Θ(log(n))  Θ(log(n))  Θ(log(n))  O(log(n))  O(log(n))  O(log(n))  O(log(n))
+        Red-Black Tree     Θ(log(n))  Θ(log(n))  Θ(log(n))  Θ(log(n))  O(log(n))  O(log(n))  O(log(n))  O(log(n))
+        Splay Tree         N/A        Θ(log(n))  Θ(log(n))  Θ(log(n))  N/A        O(log(n))  O(log(n))  O(log(n))
+        AVL Tree           Θ(log(n))  Θ(log(n))  Θ(log(n))  Θ(log(n))  O(log(n))  O(log(n))  O(log(n))  O(log(n))
+        KD Tree            Θ(log(n))  Θ(log(n))  Θ(log(n))  Θ(log(n))  O(n)       O(n)       O(n)       O(n)
+
