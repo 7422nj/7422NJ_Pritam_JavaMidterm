@@ -40,7 +40,7 @@ public class JsonReaderUtil {
         List<Employee> empList = new ArrayList<>();
         URL url = new URL(sURL);
         URLConnection request = url.openConnection();
-//        request.connect();
+        request.connect();
         JsonArray jsonArray = null;
         JsonParser jp = new JsonParser();
         JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent()));
@@ -55,14 +55,16 @@ public class JsonReaderUtil {
 
                 // Your code implementation starts here
 
-
-                System.out.println(jsonArray.toString().toCharArray());
-
                 String empEmail = jsonobject.get("empEmail").toString();
                 System.out.println(empEmail);
+                String empName = jsonobject.get("empName").toString();
+                System.out.println(empName);
+                String salary = jsonobject.get("salary").toString();
+                System.out.println(salary);
+                String department = jsonobject.get("department").toString();
+                System.out.println(department);
 
             } catch (Exception ex) {
-                ex.printStackTrace();
 
             }
         }
