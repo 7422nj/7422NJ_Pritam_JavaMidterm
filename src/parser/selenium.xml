@@ -1,46 +1,234 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<StudentInfo>
-    <student id="1">
-        <firstName>Ibrahim</firstName>
-        <lastName>Khan</lastName>
-        <score>89</score>
-    </student>
-    <student id="2">
-        <firstName>Asif</firstName>
-        <lastName>Roni</lastName>
-        <score>95</score>
-    </student>
-    <student id="3">
-        <firstName>Gumani</firstName>
-        <lastName>Hose</lastName>
-        <score>90</score>
-    </student>
-    <student id="4">
-        <firstName>Sukanto</firstName>
-        <lastName>Shaha</lastName>
-        <score>88</score>
-    </student>
-    <student id="5">
-        <firstName>MD</firstName>
-        <lastName>Hossain</lastName>
-        <score>78</score>
-    </student>
-</StudentInfo>
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+
+
+        <title>
+            Learn Java to automate software
+        </title>
+
+
+
+        <link rel="stylesheet" type="text/css" href="./css/MyStyle.css"></link>
+
+        <style type="text/css">
+            /*css rules*/
+
+            .it{
+            opacity: 0.5;
+            }
+
+            #te{
+            text-align: center;
+            background-color: green;
+            animation: step-start;
+            border-style: solid;
+            border-color: black;
+
+
+            }
 
 
 
 
+        </style>
+
+
+    </head>
+
+
+    <body style="background: pink">
+        <!-- style="background-image: url(./images/bg.jpg)" -->
+
+        <h1>              Hello world                   </h1>
+        <h2>Hello</h2>
+        <h3>Hello</h3>
+        <h4>Hello</h4>
+        <h5>Hello</h5>
+        <h6>Hello</h6>
+
+        <div id="new">
+            This is external css file linked with html
+        </div>
+
+        <!-- this is a comment -->
+
+        <p>
+            Automation describes a wide range of technologies which reduce human intervention in processes. Human intervention is reduced by predetermining decision criteria, subprocess relationships, and related actions —
+
+            <br>
+            and embodying those predeterminations in machines.</br>
+
+            <h2> predetermining</h2>
+
+        </p>
+        <div id="te">
+
+            Internal CSS
+        </div>
+        <div class="it">Hello we are testing  class css </div>
+        <div style="background-color: red">
+
+            In line css
+
+        </div>
+
+
+        <div style="background: yellow; color: red">
+            <p>this is a new line under div tag </p>
+
+        </div>
+
+        <div>
+            <img src="./images/sl1.jpeg" width="450" height="400" alt="selenium suppliment"></img>
+
+        </div>
+
+        <div>
+
+            <form>
+                <label>First Name</label>
+                <input type="text" name="fname"></input>
+                <br></br>
+
+                <label>Last Name</label>
+                <input type="text" name="lname"> </input>
+                <br></br>
+                <label>Password</label>
+                <input type="Password" name="pasword"></input>
+                <br>
+
+                <label>Accept the agreement</label>
+                    <input type="checkbox" name="agreement"> </input>
+                </br>
+
+                <label> select car</label>
+                <select>
+                    <option value="toyota">Toyota</option>
+                    <option value="tesla">Tesla</option>
+                    <option value="bmw">BMW</option>
+                </select>
+                <br>
+
+                <label> Review</label>
+                <textarea>
+                    of technologies which reduce human intervention
+
+                </textarea> </br>
+
+                <label>Food select</label>
+                <input type="checkbox" name="Pizza"></input>
+                <label>Pizza</label>
+                <input type="checkbox" name="Coffee"></input>
+                <label>Coffe</label>
+                <br></br>
+                <label>Gender</label>
+                <input type="radio" name="gender" value="male"></input>
+                <label>Male</label>
+                <input type="radio" name="gender" value="female"></input>
+                <label>Female</label>
+
+
+
+                <br></br>
+
+
+
+                <button type="submit">Login</button>
+
+
+            </form>
+
+
+
+        </div>
+        <div>
+            <table>
+                <thead>This is a table</thead>
+                <tr>
+                    <th>Sl</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Jack</td>
+                    <td>Cohen</td>
+                    <td>Manhattan,NY</td>
+
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>James</td>
+                    <td>william</td>
+                    <td>Queens,NY</td>
+
+                </tr>
+
+
+            </table>
+        </div>
+
+        <div>
+            <ul>
+                <li>Coffe</li>
+                <li>Pizza</li>
+                <li>Potoi</li>
+                <li>Ice cream</li>
+                <li>Fries</li>
+            </ul>
+
+        </div>
+
+
+        <br>
+
+        <div align="center">
+            <iframe width="420" height="315"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rlShUOaFbpc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
 
+        </div>
+
+        <div>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rlShUOaFbpc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+            <span>this is a span tag</span>
+            <strong>This is strong tag</strong>
+        </div>
+
+
+
+        <div>
+            <iframe width="1300" height="500" src="https://www.w3schools.com/html/">W3Schools</iframe>
+        </div>
+
+        <div>
+            <a href="https://www.bestbuy.com/">Best Buy</a>
+
+        </div>
 
 
 
 
+    </body>
 
 
 
+
+</html>
 
 
 
