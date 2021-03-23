@@ -2,67 +2,74 @@ package design;
 
 import java.util.ArrayList;
 
-public interface Employee {
-	
-	/*
-	Employee is an Interface which contains multiple unimplemented methods.
-	A few methods have been declared below. You need to come up with more methods to meet business requirements of this
-	    application
+public interface Employee extends employeeDatabase {
+    public static void main(String[] args) {
+
+    }
+	/*Employee is an Interface which contains multiple unimplemented methods.Again few methods
+	has been declared in below. you need to brainstorm to add more methods to meet the business requirements.
 	*/
+    //please read the following method and understand the business requirements of these following methods
+    //and then implement these in a concrete class.
 
-    /*
-     Please read the following methods and understand the business requirements of these following methods
-        and then implement these in a concrete class.
-     */
-
-    int employeeYearsOfExperience = 0;
-    String level = null;
-
-
-    // employeeId() will return employee id.
-    int employeeId();
+    //employeeId() will return employee id.
+    public int employeeId();
 
     //employeeName() will return employee name
-    String employeeName();
+    public String employeeName();
 
     //assignDepartment() will assign employee to departments
-    void assignDepartment();
+    public void assignDepartment();
 
     //calculate employee salary
-    int calculateSalary();
+    public int calculateSalary();
 
     //employee benefit
-    void benefitLayout();
+    public void benefitLayout();
 
-    //employeeDOB() will return date of birth
-    int employeeDOB();
+    // assignComputer() will assign employee to a computer
+    public void assignComputer();
 
-    //employeeSSN() will return social security number
-    int employeeSSN();
+    // assignManager() will assign employee a manager
+    public void assignManager();
 
-    //employeePTOrFT() will return full time or part time
-    void employeePTOrFT();
+    // employeeAddress(); will look at employee's present location to see if relocation is needed
+    public void employeeAddress();
 
-    //employeeIsWorkingFromHome() will return location of workspace
-    boolean employeeIsWorkingFromHome();
+    // employeeJobRole(); will assign the employee a role in his department
+    public void employeeJobRole();
 
-    //employeeExperience() will return employee's previous experience
-    int employeeExperience(int employeeYearsOfExperience);
+    public void printEmployeeInfo();
+}
 
-    //employeeJobLevel() will return level of job assigned
-    static String employeeJobLevel(String level) {
-        return null;
-    }
-    interface hiSami{
-        String x="How are you sami";
-        String y="Hope all is well";
-        String b="Hire Me please";
-    }
+// Interface inside a Interface
+interface employeeDatabase{
+
+    // employeeDatabase Interface's variables
+    String employeeResume="2 pages required";
+    boolean isUnemployed=true;
+    int daysSinceUnemployed=23;
+    double previousMonthlyWage=1000.67;
+    char employeeGender='m';
+
+    // Methods
+    void criminalRecord();
+    void reasonForLeavingPreviousJob();
+    void goalsIn5Years();
+    void questionsInMind();
 
 
 }
-interface pizza{
+// Company's HR has an interface
+interface companyHR{
 
+    // Variables
+    String internalDetails="Full review";
+    long hrContactNumber=222-444-5555;
+
+    // Methods
+    void networkInfo();
+    void hoursOfAvailability();
+    void idDetails();
 }
-interface coke{
-}
+
