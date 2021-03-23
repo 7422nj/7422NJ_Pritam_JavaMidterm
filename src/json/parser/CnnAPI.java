@@ -1,11 +1,17 @@
 package json.parser;
 
+import com.google.gson.Gson;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.nio.file.Files;
+import java.util.ArrayList;
 
 public class CnnAPI {
     /*
@@ -43,15 +49,65 @@ public class CnnAPI {
 	   Show output of all the headline news in to console.
 	   Store into choice of your database and retrieve.
 
-     */
 
-    public static void main(String[] args) throws IOException, JSONException {
-        String apiKey = "";
-        String URL = "https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=" + apiKey;
+ */
 
-        JSONObject rootObject = new JSONObject(new String(Files.readAllBytes(new File("src/json/parser/data.json").toPath())));
+        public static void main(String[] args) {
+            System.out.println("### NewsScript! v1.0: Get Daily News ###");
+            String API_KEY = "84acbdbfdf734ff1bfba06430a0eb143";
 
-        // Continue implementing here..
+            HttpClient client = HttpClient.newHttpClient();
+
+            HttpRequest httpRequest = HttpRequest.newBuilder()
+                    .uri(URI.create(String.format("https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=%s", API_KEY)))
+                    .GET()
+                    .build();
+
+            try {
+                HttpResponse<String> response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString());  //storing response converted into string by Body.Handlers
+                System.out.println(response.body());
+
+                NewsDTO obj = new Gson().fromJson(response.body(), NewsDTO.class);
+
+                System.out.println(obj.articles);
+
+                for (ArticleDTO art : obj.articles) {
+                    System.out.println("### " + art.title + " ### \n");
+                    System.out.println(art.description);
+                    System.out.println("\nPublished by: " + art.author + " " + art.publishedAt);
+                    System.out.println("\nCheck out the photos here: " + art.urlToImage);
+                    System.out.println("\nRead more: " + art.url + "\n");
+
+//                ConnectToSqlDB connect = new ConnectToSqlDB();
+//                connect.insertDataFromIntegerArrayListToSqlTable1(obj.articles, "cnn_news", "articles" );
+                }
+
+//t("INSERT INTO " + tableName + " ( " + columnName + " ) VALUES(?)");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        public class NewsDTO {
+            String status;
+            int totalResults;
+            ArrayList<ArticleDTO> articles;
+        }
+
+        public class ArticleDTO {
+            SourceDTO source;
+            String author;
+            String title;
+            public String description;
+            String url;
+            String urlToImage;
+            String publishedAt;
+        }
+
+
+        public class SourceDTO {
+            String id;
+            String name;
+        }
     }
 
-}

@@ -1,10 +1,15 @@
 package design;
 
 public enum Months {
+
     January, February, March, April, May, June, July, August, September, October, November, December;
+
     public static int whichMonth(String givenMonth) {
+
         Months months = Months.valueOf(givenMonth);
+
         int date = 0;
+
         switch (months) {
             case January:
                 date = 1;
@@ -53,4 +58,7 @@ public enum Months {
 
     public static void main(String[] args) {
 
-    }}
+        System.out.println(whichMonth("November"));
+
+    }
+}

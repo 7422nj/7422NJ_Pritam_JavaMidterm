@@ -7,15 +7,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CsvReader extends Trainee{
+public class CsvReader {
 
-    public static void main(String[] args) throws ArrayIndexOutOfBoundsException{
+    public static void main(String[] args) {
         /*
          Comma-Separated Value(CSV) of CodeLab status is downloaded and it parsed.
          Based on number of solution you solved, message is generated for you.
          You need to find the average score of the class.
          */
-
 
         String csvFilePath = System.getProperty("user.dir") + "/src/codelab/status/roster.csv";
         String line = "";
@@ -61,6 +60,17 @@ public class CsvReader extends Trainee{
                 System.out.print("You are in bad shape !-->                           ");
                 System.out.println(student.getFirstName() + " " + student.getLastName() + " " + student.getNumberOfExercisesSolved());
             }
+
+
         }
+
+        int size = roster.size();
+        int total = 0;
+        for (Trainee tr : roster) {
+            total += tr.getNumberOfExercisesSolved();
+        }
+
+        System.out.println("\nThe average score of the class: " + total / size);
     }
+
 }
